@@ -1,0 +1,25 @@
+def binary_search(Array, K):
+    l, r = 0, len(Array) - 1
+    while l <= r:
+        m = (l + r) // 2
+        if Array[m] > K:
+            r = m - 1
+        elif Array[m] < K:
+            l = m + 1
+        else:
+            return True
+    return False
+
+n = int(input())
+A = list(map(int, input().split()))
+
+m = int(input())
+numbers = list(map(int, input().split()))
+
+A.sort()
+
+for i in numbers:
+    if binary_search(A, i):
+        print(1)
+    else:
+        print(0)
