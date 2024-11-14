@@ -1,0 +1,12 @@
+word = [input() for _ in range(5)]
+
+result = []
+
+for i in range(15):
+    for j in word:
+        
+        if i < len(j):
+            result.append(j[i])
+
+
+print(''.join(result))
