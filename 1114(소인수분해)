@@ -1,0 +1,15 @@
+def prime(N):
+    if N == 1:
+        return
+    number = 2
+    while(N>1):
+        if N % number ==0:
+            print(number)
+            N //= number
+        number += 1
+        if number * number > N:
+            break
+    if N > 1:
+         print(N)
+n = int(input())
+print(prime(n))
